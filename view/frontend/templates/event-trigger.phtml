@@ -1,0 +1,19 @@
+<?php
+/**
+ * @var $block \Buzzi\PublishProductView\Block\EventTrigger
+ */
+?>
+
+<div class="buzzi-product-view-container" data-role="buzzi-product-view" data-bind="scope: 'buzzi-product-view-container'">
+</div>
+
+<script type="text/x-magento-init">
+    {
+        "[data-role=buzzi-product-view]": {
+            "Buzzi_PublishProductView/js/event-trigger": {
+                "event_type": "<?= $block->escapeJs($block->getEventType()) ?>",
+                "product_sku": "<?= $block->escapeJs($block->getProductSku()) ?>"
+            }
+        }
+    }
+</script>
