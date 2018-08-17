@@ -6,7 +6,7 @@ define([
     'uiComponent',
     'Buzzi_Publish/js/action/send-event'
 ], function (Component, sendEvent) {
-    "use strict";
+    'use strict';
 
     return Component.extend({
         defaults: {
@@ -17,7 +17,7 @@ define([
         initialize: function () {
             this._super();
 
-            if (this.product_sku) {
+            if (this.event_type && this.product_sku) {
                 this.triggerEvent();
             }
         },
