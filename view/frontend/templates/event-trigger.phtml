@@ -11,8 +11,8 @@
     {
         "[data-role=buzzi-product-view]": {
             "Buzzi_PublishProductView/js/event-trigger": {
-                "event_type": "<?= $block->escapeJs($block->getEventType()) ?>",
-                "product_sku": "<?= $block->escapeJs($block->getProductSku()) ?>"
+                "event_type": "<?= $block->escapeJsQuote($block->getEventType(), "\"") ?>",
+                "product_sku": "<?= $block->escapeJsQuote($block->getProductSku(), "\"") ?>"
             }
         }
     }
